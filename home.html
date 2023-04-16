@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawsitiveProject</title>
+    <link rel="stylesheet" href="main.css">
+    <script defer src="frontPage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <link href="https://fonts.cdnfonts.com/css/good-dog" rel="stylesheet">
+        <nav>
+            <a class="logo" href="home.html">
+                <img src="images/logoMega.png" class="logo" width="100" height="100">
+            </a>
+        <div class="nav-logo">
+            <span>PawsitiveProject</span>
+        </div>
+            <ul>
+                <li><a href="#section1">Home</a></li>
+                <li><a href="#section2">How We Operate</a></li>
+                <li><a href="#section3"></a></li>
+                <li><a href="#section4">Design Here</a></li>
+                <li><a href="#section5">Our Mission</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="parallax">
+            <section class="parallax-section" id="section1">
+                <div class="textbox-container">
+                    <p class="slogan">Crafting Smiles, One Paw-some design at a time</p>
+                    <button id="open-registration-btn">★ REGISTER ★</button>
+                </div>                
+                    <div id="registration-modal" class="modal">
+                        <div class="modal-content">
+                            <h2>★ Registration Form ★</h2>
+                            <p>Please fill out the form below to register your child for our program.</p>
+                            <form id="registration-form" action="/register" method="POST" enctype="multipart/form-data">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" required>
+                                
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" required>
+                    
+                                <label for="age">Age:</label>
+                                <input type="number" id="age" name="age" min="1" max="18" required>
+                    
+                                <label for="disability-document">Disability Certificate or Documentation (PDF, JPG, or PNG):</label>
+                                <input type="file" id="disability-document" name="disability-document" accept=".pdf, .jpg, .jpeg, .png" required>
+                    
+                                <div class="confirmation">
+                                    <input type="checkbox" id="confirmation" name="confirmation" required>
+                                    <label for="confirmation">I confirm that the information provided is accurate, and I am the parent or legal guardian of the child.</label>
+                                </div>
+                    
+                                <input type="submit" value="Submit" class="submit-btn">
+                            </form>
+                        </div>
+                    </div>
+                <div class="frontImage">
+                    <div class="firstImage">
+                        <img src="images/kids.png">
+                    </div>
+                </div>
+            </section>
+
+            <section class="parallax-section" id="section2">
+                <section class="how-it-works">
+                    <h2>★ From a Design to a Reality ★</h2>
+                    <div class="block-container">
+                        <div class="parent-row">
+                            <div class="row">
+                                <img src="images/img1Mega.png" alt="Image 1" class="how-it-works-image">
+                                <div class="rectangle-block block1">
+                                    <h3>Step 1: Children Design for Animals</h3>
+                                    <p>Children are encouraged to unleash their creativity and design clothes and accessories for animals in shelters.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parent-row">
+                            <div class="row">
+                                <div class="rectangle-block block2">
+                                    <h3>Step 2: Submission & Verification</h3>
+                                    <p>Upon receiving a child's design submission, we perform a thorough background check to confirm their eligibility based on the provided documentation of their illness or disability. This ensures that our platform remains dedicated to supporting and uplifting children who face unique challenges.</p>
+                                </div>
+                                <img src="images/img2Mega.png" alt="Image 2" class="how-it-works-image">
+                            </div>
+                        </div>
+                        <div class="parent-row">
+                            <div class="row">
+                                <img src="images/img3Mega.png" alt="Image 3" class="how-it-works-image">
+                                <div class="rectangle-block block3">
+                                    <h3>Step 3: Bringing Designs to Life</h3>
+                                    <p>We transform the submitted designs into real clothing and accessories, and then search for suitable animals at shelters. Our focus is on animals that have been at the shelter the longest, as dressing them up in these unique outfits can increase their visibility and adoption chances, giving them the opportunity to find their forever homes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="parent-row">
+                            <div class="row">
+                                <div class="rectangle-block block4">
+                                    <h3>Step 4: Showcasing the Results</h3>
+                                    <p>Once the animals are dressed in their new, customized outfits, we professionally photograph them, capturing their unique personalities and the creativity of the designs. We then feature these photos on both our website and the animal shelter's website, giving credit to the talented young designer.</p>
+                                </div>
+                                <img src="images/img4Mega.png" alt="Image 4" class="how-it-works-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+
+            <section class="parallax-section" id="section3">
+            </section>   
+
+            <section class="parallax-section" id="section4">
+                <h2>Select an Animal and Accessory</h2>
+                <div class="option-container">
+                    <label for="animal-select">Animal: </label>
+                    <select id="animal-select">
+                        <option value="catMega.JPG">Cat</option>
+                        <option value="dogMega.jpg">Dog</option>
+                        <option value="guineaMega.jpg">Guinea Pig</option>
+                        <option value="rabbitMega.jpg">Rabbit</option>
+                    </select>
+                </div>
+                <div class="option-container">
+                    <label for="accessory-select">Accessory: </label>
+                    <select id="accessory-select">
+                        <option value="">None</option>
+                        <option value="hat.png">Hat</option>
+                        <option value="tie.png">Tie</option>
+                        <option value="scarf.png">Scarf</option>
+                        <!-- Add more accessory options here -->
+                    </select>
+                </div>
+                <h2>Be Creative! Have Fun! Try it all!</h2>
+                <div class="option-container">
+                    <label for="color-picker">Color: </label>
+                    <input type="color" id="color-picker" value="#ff0000">
+                </div>
+                <div class="option-container">
+                    <label for="brush-size">Brush size: </label>
+                    <input type="range" id="brush-size" min="1" max="50" value="10">
+                </div>
+                <div class="option-container">
+                    <button id="eraser">Eraser</button>
+                </div>
+                <div class="canvas-container">
+                    <canvas id="animal-canvas" width="1200" height="900"></canvas>
+                    <canvas id="accessory-canvas" width="1200" height="900"></canvas>
+                </div>
+                
+                <script src="ArtPlatform.js"></script>
+            </section>
+            
+            <section class="parallax-section" id="section5">
+                <section class="parallax-section" id="section5">
+                    <h2>★ Our Mission ★</h2>
+                    <p>
+                        At PawsitiveProject, we believe in the power of creativity and compassion to make a positive impact on the lives of children and animals. We understand that some children may face unique challenges due to illness, disability, or other circumstances. Our mission is to provide these children with a platform to showcase their artistic talents and, at the same time, promote awareness and support for animal shelters.
+                    </p>
+                    <p>
+                        By allowing children to design clothes and accessories for shelter animals, we hope to not only boost their confidence and self-expression but also shine a light on the importance of animal adoption. When a child submits their design, we bring it to life by creating the outfit and dressing up a shelter animal. The photos are then displayed on our website and the animal shelter's website, helping to raise awareness for these animals in need of loving homes.
+                    </p>
+                    <p>
+                        In addition to supporting animal shelters, our website is also committed to raising awareness and providing support for children in need. We achieve this by donating a portion of our proceeds to programs and organizations that assist children facing various challenges. By partnering with these programs, we strive to make a positive impact on the lives of both children and animals, fostering a brighter future for all.
+                    </p>
+                </section>
+                
+            </section> 
+
+        </div>    
+    </main>
+</body>
+</html>
+
